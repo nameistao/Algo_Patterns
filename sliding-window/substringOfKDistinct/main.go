@@ -13,6 +13,9 @@ func main(){
 	fmt.Println("Actual:", longestSubstringKDistinct(10, "cbbebi"))
 }
 
+//Question: longest substring with maximum k distinct characters
+//Time: O(N)
+//Space: O(M), where M is the # of distinct characters in str
 func longestSubstringKDistinct(k int, str string) int {
 	m := make(map[int]int)
 	var start, longest int
