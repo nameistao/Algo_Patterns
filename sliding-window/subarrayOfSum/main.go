@@ -15,6 +15,8 @@ func main(){
 }
 
 //Question: smallest subarray with a given sum
+//Time: O(N)
+//Space: O(1)
 func findMinSubArray(s int, arr []int) int{
 	var(
 		sum, start int
