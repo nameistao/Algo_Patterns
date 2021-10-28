@@ -10,6 +10,9 @@ func main(){
 
 }
 
+//Question: fruits into baskets
+//Time: O(N)
+//Space: O(1)
 func findLength(fruits []int) int {
 	var(
 		start int
