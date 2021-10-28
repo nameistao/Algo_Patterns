@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main(){
+func main() {
 	fmt.Println("Expected: 2")
 	fmt.Println("Actual:", findMinSubArray(7, []int{2, 1, 5, 2, 3, 2}))
 	fmt.Println("Expected: 1")
@@ -17,26 +17,26 @@ func main(){
 //Question: smallest subarray with a given sum
 //Time: O(N)
 //Space: O(1)
-func findMinSubArray(s int, arr []int) int{
-	var(
+func findMinSubArray(s int, arr []int) int {
+	var (
 		sum, start int
-		min int = math.MaxInt32
+		min        int = math.MaxInt32
 	)
 
-	for i,v := range arr {
+	for i, v := range arr {
 		sum += v
 
-		for sum >= s{
+		for sum >= s {
 			min = minInt(min, i-start+1)
 			sum -= arr[start]
 			start++
 		}
 	}
-	
+
 	return min
 }
 
-func minInt(x int, y int) int{
+func minInt(x int, y int) int {
 	if x < y {
 		return x
 	}

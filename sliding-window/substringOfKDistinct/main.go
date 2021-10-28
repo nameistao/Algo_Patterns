@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	fmt.Println("Expected: 4")
 	fmt.Println("Actual:", longestSubstringKDistinct(2, "araaci"))
 	fmt.Println("Expected: 2")
@@ -19,9 +19,8 @@ func main(){
 func longestSubstringKDistinct(k int, str string) int {
 	m := make(map[int]int)
 	var start, longest int
-	
 
-	for i,v := range str{
+	for i, v := range str {
 		add(m, v)
 
 		if len(m) > k {
@@ -31,20 +30,20 @@ func longestSubstringKDistinct(k int, str string) int {
 
 		longest = max(longest, i-start+1)
 	}
-	
+
 	return longest
 }
 
-func remove(m map[int]int, v rune){
+func remove(m map[int]int, v rune) {
 	val := m[int(v)]
 	if val == 1 {
 		delete(m, int(v))
 	} else {
-		val--;
+		val--
 	}
 }
 
-func add(m map[int]int, v rune){
+func add(m map[int]int, v rune) {
 	val, found := m[int(v)]
 	if found {
 		val++
@@ -54,7 +53,7 @@ func add(m map[int]int, v rune){
 }
 
 func max(x int, y int) int {
-	if x > y{
+	if x > y {
 		return x
 	}
 	return y
