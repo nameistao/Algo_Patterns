@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){	
+func main() {
 	fmt.Println("Expected: 5")
 	fmt.Println("Actual:", findLength(2, "aabccbb"))
 	fmt.Println("Expected: 4")
@@ -15,20 +15,20 @@ func main(){
 //Time: O(N)
 //Space: O(1)
 func findLength(k int, str string) int {
-	var(
-		start int
+	var (
+		start    int
 		maxCount int
-		maxLen int
-		maxChar int
+		maxLen   int
+		maxChar  int
 	)
 
 	m := make(map[int]int)
 
-	for i,v := range str{
+	for i, v := range str {
 		_, found := m[int(v)]
 		if found {
 			m[int(v)]++
-		} else{
+		} else {
 			m[int(v)] = 1
 		}
 		if m[int(v)] >= maxCount {
@@ -36,7 +36,7 @@ func findLength(k int, str string) int {
 			maxChar = int(v)
 		}
 
-		for i-start+1 - maxCount > k {
+		for i-start+1-maxCount > k {
 			m[int(str[start])]--
 			if int(str[start]) == maxChar {
 				maxCount--
