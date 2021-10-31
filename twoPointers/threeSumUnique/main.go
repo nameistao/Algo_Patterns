@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Actual:", searchTriplets([]int{-5, 2, -1, -2, 3}))
 }
 
-//Question: remove deplicates
+//Question: triplet sum to zero
 //Time: O(N^2)
 //Space: O(N)
 func searchTriplets(arr []int) [][]int {

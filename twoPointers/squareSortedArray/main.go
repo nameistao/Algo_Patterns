@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("Actual:", makeSquare([]int{-3, -1, 0, 1, 2}))
 }
 
-//Question: remove deplicates
+//Question: squaring a sorted array
 //Time: O(N)
 //Space: O(N)
 func makeSquare(arr []int) []int {
