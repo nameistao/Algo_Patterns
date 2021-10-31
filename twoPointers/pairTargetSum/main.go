@@ -9,6 +9,9 @@ func main() {
 	fmt.Println("Actual:", search([]int{2, 5, 9, 11}, 11))
 }
 
+//Question: pair with target sum
+//Time: O(N)
+//Space: O(1)
 func search(arr []int, targetSum int) []int {
 	p1, p2 := 0, len(arr)-1
 	for p1 < p2 {
