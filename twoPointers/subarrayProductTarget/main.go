@@ -9,11 +9,14 @@ func main() {
 	fmt.Println("Actual:", findSubarrays([]int{8, 2, 6, 5}, 50))
 }
 
+//Question: subarrays with product less than a target
+//Time: O(N^2)
+//Space: O(1)
 func findSubarrays(arr []int, target int) [][]int {
 	mult, start := 1, 0
-	answer := make([][]int, 0)
+	answer := make([][]int,0)
 
-	for i, v := range arr {
+	for i,v := range arr{
 		mult *= v
 
 		for start < i && mult >= target {
@@ -22,7 +25,7 @@ func findSubarrays(arr []int, target int) [][]int {
 		}
 
 		temp := make([]int, 0)
-		for j := i; j >= start; j-- {
+		for j:=i;j>=start;j--{
 			temp = append([]int{arr[j]}, temp...)
 			answer = append(answer, temp)
 		}
