@@ -17,6 +17,7 @@ func sort(arr []int) []int {
 	for p2 < len(arr) {
 		if arr[p2] == 0 && arr[p1] != 0 {
 			arr[p2], arr[p1] = arr[p1], arr[p2]
+			p1++
 		}
 		p2++
 	}
