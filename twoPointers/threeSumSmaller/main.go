@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Actual:", searchTriplets([]int{-1, 4, 2, 1, 3}, 5))
 }
 
-//Question: squaring a sorted array
+//Question: triplets with smaller sum
 //Time: O(N^2)
 //Space: O(1)
 func searchTriplets(arr []int, target int) int {
