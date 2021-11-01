@@ -13,23 +13,20 @@ func main() {
 //Time: O(N)
 //Space: O(1)
 func sort(arr []int) []int {
-	p1, p2 := 0, 1
-	for p2 < len(arr) {
-		if arr[p2] == 0 && arr[p1] != 0 {
-			arr[p2], arr[p1] = arr[p1], arr[p2]
+	p1, p2 := 0, len(arr)-1
+
+	for i := 0; i <= p2; {
+		if arr[i] == 0 {
+			arr[i], arr[p1] = arr[p1], arr[i]
 			p1++
+			i++
+		} else if arr[i] == 2 {
+			arr[i], arr[p2] = arr[p2], arr[i]
+			p2--
+		} else {
+			i++
 		}
-		p2++
 	}
-	p2 = p1 + 1
-	for p2 < len(arr) {
-		if arr[p2] == 1 && arr[p1] != 1 {
-			temp := arr[p2]
-			arr[p2] = arr[p1]
-			arr[p1] = temp
-			p1++
-		}
-		p2++
-	}
+
 	return arr
 }
