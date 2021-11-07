@@ -45,7 +45,7 @@ func findStringAnagrams(str string, pattern string) []int {
 			}
 		}
 
-		if len(pattern) == foundPattern {
+		if len(pMap) == foundPattern {
 			answer = append(answer, i-len(pattern)+1)
 		}
 	}
