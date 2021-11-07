@@ -18,10 +18,7 @@ func main() {
 //Time: O(N)
 //Space: O(1)
 func findMinSubArray(s int, arr []int) int {
-	var (
-		sum, start int
-		min        int = math.MaxInt32
-	)
+	sum, start, min := 0,0, math.MaxInt32
 
 	for i, v := range arr {
 		sum += v
@@ -33,6 +30,10 @@ func findMinSubArray(s int, arr []int) int {
 		}
 	}
 
+    if min == math.MaxInt32 {
+        return 0
+    }
+    
 	return min
 }
 
