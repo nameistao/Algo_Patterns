@@ -1,1 +1,1 @@
-# Algo_Patterns
+# Algorithm_Patterns
