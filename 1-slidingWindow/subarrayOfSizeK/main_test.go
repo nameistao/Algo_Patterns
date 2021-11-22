@@ -16,5 +16,10 @@ var FindMaxSumSubarrayTests = []FindMaxSumSubarrayTest{
 }
 
 func TestFindMaxSumSubarray(t *testing.T) {
-	
+	for _,v := range FindMaxSumSubarrayTests {
+		actual := findMaxSumSubArray(v.arg1, v.arg2)
+		if actual != v.expected {
+			t.Errorf("expected %v, actual %v", v.expected, actual)
+		}
+	}
 }
