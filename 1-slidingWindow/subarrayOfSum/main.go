@@ -1,18 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
-
-func main() {
-	fmt.Println("Expected: 2")
-	fmt.Println("Actual:", findMinSubArray(7, []int{2, 1, 5, 2, 3, 2}))
-	fmt.Println("Expected: 1")
-	fmt.Println("Actual:", findMinSubArray(7, []int{2, 1, 5, 2, 8}))
-	fmt.Println("Expected: 3")
-	fmt.Println("Actual:", findMinSubArray(8, []int{3, 4, 1, 1, 6}))
-}
+import "math"
 
 //Question: smallest subarray with a given sum
 //Time: O(N)
