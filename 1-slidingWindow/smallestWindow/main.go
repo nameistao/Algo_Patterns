@@ -1,16 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: abdec")
-	fmt.Println("Actual:", findSubstring("aabdec", "abc"))
-	fmt.Println("Expected: bca")
-	fmt.Println("Actual:", findSubstring("abdbca", "abc"))
-	fmt.Println("Expected: ")
-	fmt.Println("Actual:", findSubstring("adcad", "abc"))
-}
-
 //Question: smallet window containing substring
 //Time: O(N+M)
 //Space: O(M)
