@@ -6,7 +6,7 @@ import (
 
 type FindPermutationTest struct {
 	arg1, arg2 string
-	expected bool
+	expected   bool
 }
 
 var FindPermutationTests = []FindPermutationTest{
@@ -15,9 +15,10 @@ var FindPermutationTests = []FindPermutationTest{
 	{"bcdxabcdy", "bcdyabcdx", true},
 	{"aaacb", "abc", true},
 }
+
 func TestFindPermutation(t *testing.T) {
-	for _,v := range FindPermutationTests {
-		actual := findPermutation(v.arg1, v.arg2) 
+	for _, v := range FindPermutationTests {
+		actual := findPermutation(v.arg1, v.arg2)
 		if actual != v.expected {
 			t.Errorf("expected %v, actual %v", v.expected, actual)
 		}

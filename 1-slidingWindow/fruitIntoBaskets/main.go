@@ -4,7 +4,7 @@ package main
 //Time: O(N)
 //Space: O(1)
 func findLength(fruits []int) int {
-	start, cur, max := 0,0,0
+	start, cur, max := 0, 0, 0
 	m := make(map[int]int)
 
 	for _, v := range fruits {
@@ -24,7 +24,7 @@ func findLength(fruits []int) int {
 				delete(m, val)
 			}
 			cur--
-            start++
+			start++
 		}
 
 		max = maxInt(max, cur)
