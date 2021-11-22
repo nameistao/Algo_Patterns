@@ -1,18 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: true")
-	fmt.Println("Actual:", findPermutation("oidbcaf", "abc"))
-	fmt.Println("Expected: false")
-	fmt.Println("Actual:", findPermutation("odicf", "dc"))
-	fmt.Println("Expected: true")
-	fmt.Println("Actual:", findPermutation("bcdxabcdy", "bcdyabcdx"))
-	fmt.Println("Expected: true")
-	fmt.Println("Actual:", findPermutation("aaacb", "abc"))
-}
-
 //Question: permutation in a string
 //Time: O(N+M)
 //Space: O(M)

@@ -1,16 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: 3")
-	fmt.Println("Actual:", findLength([]int{1, 2, 3, 1, 3}))
-	fmt.Println("Expected: 5")
-	fmt.Println("Actual:", findLength([]int{1, 2, 3, 2, 2, 3}))
-	fmt.Println("Expected: 5")
-	fmt.Println("Actual:", findLength([]int{3,3,3,1,2,1,1,2,3,3,4}))
-}
-
 //Question: fruits into baskets
 //Time: O(N)
 //Space: O(1)
