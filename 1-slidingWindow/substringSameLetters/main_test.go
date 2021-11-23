@@ -6,13 +6,14 @@ import (
 
 type FindLengthTest struct {
 	arg1     int
-	arg2     []int
+	arg2     string
 	expected int
 }
 
 var FindLengthTests = []FindLengthTest{
-	{2, []int{0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1}, 6},
-	{3, []int{0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1}, 9},
+	{2, "aabccbb", 5},
+	{1, "abbcb", 4},
+	{1, "abccde", 3},
 }
 
 func TestFindLength(t *testing.T) {

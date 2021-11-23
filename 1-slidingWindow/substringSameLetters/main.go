@@ -1,16 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: 5")
-	fmt.Println("Actual:", findLength(2, "aabccbb"))
-	fmt.Println("Expected: 4")
-	fmt.Println("Actual:", findLength(1, "abbcb"))
-	fmt.Println("Expected: 3")
-	fmt.Println("Actual:", findLength(1, "abccde"))
-}
-
 //Question: longest substring with same letters after replacement
 //Time: O(N)
 //Space: O(1)

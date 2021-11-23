@@ -5,8 +5,8 @@ import (
 )
 
 type FindMinSubArrayTest struct {
-	arg1 int
-	arg2 []int
+	arg1     int
+	arg2     []int
 	expected int
 }
 
@@ -17,7 +17,7 @@ var FindMinSubArrayTests = []FindMinSubArrayTest{
 }
 
 func TestFindSubArray(t *testing.T) {
-	for _,v := range FindMinSubArrayTests {
+	for _, v := range FindMinSubArrayTests {
 		actual := findMinSubArray(v.arg1, v.arg2)
 		if actual != v.expected {
 			t.Errorf("expected %v, actual %v", v.expected, actual)
