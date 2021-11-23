@@ -1,16 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: 3")
-	fmt.Println("Actual:", findLength("aabccbb"))
-	fmt.Println("Expected: 2")
-	fmt.Println("Actual:", findLength("abbbb"))
-	fmt.Println("Expected: 3")
-	fmt.Println("Actual:", findLength("abccde"))
-}
-
 //Question: longest substring with distinct characters
 //Time: O(N)
 //Space: O(N)

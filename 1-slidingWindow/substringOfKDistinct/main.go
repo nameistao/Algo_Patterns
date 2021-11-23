@@ -1,18 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println("Expected: 4")
-	fmt.Println("Actual:", longestSubstringKDistinct(2, "araaci"))
-	fmt.Println("Expected: 2")
-	fmt.Println("Actual:", longestSubstringKDistinct(1, "araaci"))
-	fmt.Println("Expected: 5")
-	fmt.Println("Actual:", longestSubstringKDistinct(3, "cbbebi"))
-	fmt.Println("Expected: 6")
-	fmt.Println("Actual:", longestSubstringKDistinct(10, "cbbebi"))
-}
-
 //Question: longest substring with maximum k distinct characters
 //Time: O(N)
 //Space: O(M), where M is the # of distinct characters in str
